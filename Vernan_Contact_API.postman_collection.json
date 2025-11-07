@@ -1,0 +1,84 @@
+{
+  "info": {
+    "name": "Vernan Contact API",
+    "description": "API collection for Vernan Contact Form submission",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Submit Contact Form",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Amit\",\n  \"email\": \"hsatyamrav@gmail.com\",\n  \"phone\": \"908765498\",\n  \"message\": \"kjhgcgj\"\n}"
+        },
+        "url": {
+          "raw": "https://vernanbackend.ezlab.in/api/contact-us/",
+          "protocol": "https",
+          "host": [
+            "vernanbackend",
+            "ezlab",
+            "in"
+          ],
+          "path": [
+            "api",
+            "contact-us",
+            ""
+          ]
+        },
+        "description": "Submit a contact form with name, email, phone, and message. Returns 200 on success with created_at, updated_at, and id fields."
+      },
+      "response": [
+        {
+          "name": "Successful Response",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Amit\",\n  \"email\": \"hsatyamrav@gmail.com\",\n  \"phone\": \"908765498\",\n  \"message\": \"kjhgcgj\"\n}"
+            },
+            "url": {
+              "raw": "https://vernanbackend.ezlab.in/api/contact-us/",
+              "protocol": "https",
+              "host": [
+                "vernanbackend",
+                "ezlab",
+                "in"
+              ],
+              "path": [
+                "api",
+                "contact-us",
+                ""
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "{\n  \"created_at\": \"2025-10-10T05:27:59.371578Z\",\n  \"email\": \"hsatyamrav@gmail.com\",\n  \"id\": 49,\n  \"message\": \"kjhgcgj\",\n  \"name\": \"Amit\",\n  \"phone\": \"908765498\",\n  \"updated_at\": \"2025-10-10T05:27:59.371598Z\"\n}"
+        }
+      ]
+    }
+  ]
+}

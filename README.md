@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# Vernan Contact Form - React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A responsive single-page React application with a contact form integrated with the Vernan Backend API.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- ✅ Responsive design for multiple screen sizes
+- ✅ Form validation (client-side)
+- ✅ Email validation
+- ✅ Empty form submission prevention
+- ✅ API integration with success/error handling
+- ✅ Modern UI with gradient design
+- ✅ Loading states during submission
 
-### `npm start`
+## Responsive Breakpoints
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The application is fully responsive and tested for:
+- 480p (Mobile View)
+- 720p (Tablet View)
+- 1080p (Desktop View)
+- 2732x2048 (iPad)
+- 1440x823 (MacBook)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## API Information
 
-### `npm test`
+**Server Link:** https://vernanbackend.ezlab.in
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**API Endpoint:** https://vernanbackend.ezlab.in/api/contact-us/
 
-### `npm run build`
+**Method:** POST
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Request Body:**
+```json
+{
+  "name": "Amit",
+  "email": "hsatyamrav@gmail.com",
+  "phone": "908765498",
+  "message": "kjhgcgj"
+}
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Response (200 OK):**
+```json
+{
+  "created_at": "2025-10-10T05:27:59.371578Z",
+  "email": "hsatyamrav@gmail.com",
+  "id": 49,
+  "message": "kjhgcgj",
+  "name": "Amit",
+  "phone": "908765498",
+  "updated_at": "2025-10-10T05:27:59.371598Z"
+}
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd vernan-contact-form
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Install dependencies:
+```bash
+npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Start the development server:
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The application will open at `http://localhost:3000`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Build for Production
 
-## Learn More
+```bash
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Validation Rules
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Empty Form Submission:** All fields are required
+2. **Email Validation:** Must be a valid email format (example@domain.com)
+3. **Success Message:** "Form Submitted" displayed on successful submission (200 response)
+4. **Error Handling:** Network errors and failed submissions are handled gracefully
 
-### Code Splitting
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+vernan-contact-form/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── ContactForm.js
+│   │   └── ContactForm.css
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+├── Vernan_Contact_API.postman_collection.json
+├── package.json
+└── README.md
+```
 
-### Analyzing the Bundle Size
+## Postman Collection
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+A Postman collection is included in the repository: `Vernan_Contact_API.postman_collection.json`
 
-### Making a Progressive Web App
+Import this file into Postman to test the API endpoints.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Technologies Used
 
-### Advanced Configuration
+- React 18
+- CSS3 (with responsive design)
+- Fetch API for HTTP requests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Design Reference
 
-### Deployment
+Figma Design: https://www.figma.com/design/1EUuNvrVUVWuYkTG0OmpMj/EZ-Labs-Assignment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## License
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+MIT
