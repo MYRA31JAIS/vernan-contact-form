@@ -53,9 +53,6 @@ const Portfolio = () => {
 
               <div className="video-display">
                 <div className="play-button">▶</div>
-                <div className="video-placeholder">
-                  <p>Video {currentSlide + 1}</p>
-                </div>
               </div>
 
               <div className="film-strip-bottom">
