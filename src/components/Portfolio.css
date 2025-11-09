@@ -1,0 +1,199 @@
+.portfolio-container {
+  min-height: 100vh;
+  background: #FFF5F0;
+  padding: 80px 40px 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio-content {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  gap: 40px;
+  align-items: center;
+}
+
+.camera-illustration {
+  width: 150px;
+  height: 150px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150' fill='none'%3E%3Crect x='30' y='50' width='90' height='60' stroke='%23FFB8A0' stroke-width='2' fill='none'/%3E%3Ccircle cx='75' cy='80' r='20' stroke='%23FFB8A0' stroke-width='2' fill='none'/%3E%3Crect x='40' y='40' width='20' height='10' stroke='%23FFB8A0' stroke-width='2' fill='none'/%3E%3Cpath d='M30 50 L40 40 L60 40 L70 50' stroke='%23FFB8A0' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+.portfolio-main {
+  text-align: center;
+}
+
+.portfolio-title {
+  font-size: 32px;
+  color: #333;
+  font-weight: 400;
+  margin-bottom: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.portfolio-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.video-carousel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.carousel-btn {
+  background: white;
+  border: 2px solid #333;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 28px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  color: #333;
+}
+
+.carousel-btn:hover {
+  background: #FF6B4A;
+  border-color: #FF6B4A;
+  color: white;
+}
+
+.carousel-container {
+  border: 3px solid #6B5FD8;
+  background: white;
+  padding: 0;
+  position: relative;
+  max-width: 600px;
+}
+
+.film-strip-top,
+.film-strip-bottom {
+  display: flex;
+  justify-content: space-around;
+  background: #333;
+  padding: 8px 0;
+}
+
+.film-hole {
+  width: 12px;
+  height: 12px;
+  background: #FFF5F0;
+  border-radius: 2px;
+}
+
+.video-display {
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(135deg, #D4A574 0%, #B88A5E 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.play-button {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #FF6B4A;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.play-button:hover {
+  transform: scale(1.1);
+}
+
+.video-placeholder {
+  color: white;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 0;
+}
+
+.indicator.active {
+  background: #FF6B4A;
+  border-color: #FF6B4A;
+}
+
+.indicator:hover {
+  background: #FFB8A0;
+}
+
+.mandala-decoration {
+  width: 150px;
+  height: 150px;
+  background-image: url("data:image/svg+xml,%3Csvg width='150' height='150' viewBox='0 0 150 150' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='75' cy='75' r='60' stroke='%23FFB8A0' stroke-width='1' fill='none' opacity='0.4'/%3E%3Ccircle cx='75' cy='75' r='50' stroke='%23FFB8A0' stroke-width='1' fill='none' opacity='0.4'/%3E%3Ccircle cx='75' cy='75' r='40' stroke='%23FFB8A0' stroke-width='1' fill='none' opacity='0.4'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+@media (max-width: 1024px) {
+  .portfolio-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .camera-illustration,
+  .mandala-decoration {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-carousel {
+    flex-direction: column;
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .video-display {
+    height: 250px;
+  }
+
+  .portfolio-title {
+    font-size: 24px;
+  }
+}

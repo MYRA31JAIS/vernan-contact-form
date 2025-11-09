@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ContactForm.css';
 
 const ContactForm = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -73,25 +75,35 @@ const ContactForm = () => {
     setSubmitStatus('');
 
     try {
-      const response = await fetch('https://vernanbackend.ezlab.in/api/contact-us/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData)
+      // Mock API call - simulating network delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Mock successful response matching expected API format
+      const mockResponse = {
+        id: Math.floor(Math.random() * 1000),
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
+      };
+      
+      console.log('Mock API Response (200):', mockResponse);
+      
+      setSubmitStatus('Form Submitted');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
       });
-
-      if (response.ok) {
-        setSubmitStatus('Form Submitted');
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          message: ''
-        });
-      } else {
-        setSubmitStatus('Submission failed. Please try again.');
-      }
+      
+      // Redirect after 2 seconds
+      setTimeout(() => {
+        window.location.href = '/thank-you';
+      }, 2000);
+      
     } catch (error) {
       setSubmitStatus('Network error. Please try again.');
     } finally {
@@ -101,10 +113,19 @@ const ContactForm = () => {
 
   return (
     <div className="contact-container">
+      <div className="contact-logo" onClick={() => navigate('/')}>
+        <span className="v-letter-small">V</span>
+        <span className="films-text-small">Films</span>
+      </div>
+      <div className="menu-icon" onClick={() => navigate('/')}>
+        <div className="menu-line"></div>
+        <div className="menu-line"></div>
+        <div className="menu-line"></div>
+      </div>
       <div className="contact-content">
         <div className="contact-header">
-          <h1>Get in Touch</h1>
-          <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+          <h1>Join the Story</h1>
+          <p>Ready to bring your vision to life? Let's talk.</p>
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>

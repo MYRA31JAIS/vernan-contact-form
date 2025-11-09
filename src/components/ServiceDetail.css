@@ -1,0 +1,191 @@
+.service-detail-container {
+  min-height: 100vh;
+  background: #FFF5F0;
+  padding: 80px 40px 40px;
+  position: relative;
+}
+
+.service-detail-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-quote {
+  font-size: 24px;
+  color: #333;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 2px solid #6B5FD8;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+}
+
+.back-btn {
+  background: #FF6B4A;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: background 0.3s;
+}
+
+.back-btn:hover {
+  background: #FF5533;
+}
+
+.service-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.service-image-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-image {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid #6B5FD8;
+  border-radius: 8px;
+}
+
+.art-curation-img {
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400"><rect fill="%23B88A5E" width="400" height="400"/></svg>');
+}
+
+.cta-btn {
+  background: #6B5FD8;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cta-btn:hover {
+  background: #5A4EC7;
+}
+
+.service-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-name {
+  font-size: 22px;
+  color: #333;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+}
+
+.explore-btn {
+  background: transparent;
+  color: #FF6B4A;
+  border: 2px solid #FF6B4A;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: all 0.3s;
+}
+
+.explore-btn:hover {
+  background: #FF6B4A;
+  color: white;
+}
+
+.service-description {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.service-description p {
+  margin-bottom: 12px;
+}
+
+.service-description ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.service-description li {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.service-description li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #FF6B4A;
+  font-weight: bold;
+}
+
+.service-icons {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.gallery-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60' fill='none'%3E%3Crect x='10' y='15' width='40' height='30' stroke='%23333' stroke-width='2' fill='none'/%3E%3Cpath d='M15 35 L25 25 L35 35 L45 25' stroke='%23FF6B4A' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+}
+
+.event-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60' fill='none'%3E%3Crect x='10' y='15' width='40' height='35' stroke='%23333' stroke-width='2' fill='none'/%3E%3Cline x1='20' y1='10' x2='20' y2='20' stroke='%23333' stroke-width='2'/%3E%3Cline x1='40' y1='10' x2='40' y2='20' stroke='%23333' stroke-width='2'/%3E%3C/svg%3E");
+}
+
+.community-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60' fill='none'%3E%3Ccircle cx='30' cy='20' r='8' stroke='%23333' stroke-width='2' fill='none'/%3E%3Cpath d='M15 45 Q15 30 30 30 Q45 30 45 45' stroke='%23FF6B4A' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 768px) {
+  .service-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .service-quote {
+    font-size: 18px;
+  }
+
+  .service-icons {
+    justify-content: center;
+  }
+}

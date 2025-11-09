@@ -1,0 +1,123 @@
+.services-container {
+  min-height: 100vh;
+  background: #FFF5F0;
+  padding: 80px 40px 40px;
+  position: relative;
+}
+
+.services-logo {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.services-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 28px;
+  color: #333;
+  font-weight: 400;
+  margin-bottom: 60px;
+  font-family: 'Inter', sans-serif;
+}
+
+.services-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.service-card {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.polaroid {
+  background: white;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transform: rotate(-2deg);
+  transition: transform 0.3s;
+}
+
+.service-card:nth-child(2) .polaroid {
+  transform: rotate(2deg);
+}
+
+.service-card:nth-child(3) .polaroid {
+  transform: rotate(-3deg);
+}
+
+.service-card:hover .polaroid {
+  transform: rotate(0deg);
+}
+
+.polaroid-image {
+  width: 280px;
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 15px;
+}
+
+.polaroid-image.film-production {
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 320"><rect fill="%23D4A574" width="280" height="320"/></svg>');
+}
+
+.polaroid-image.branding {
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 320"><rect fill="%23C89B6D" width="280" height="320"/></svg>');
+}
+
+.polaroid-image.art-curation {
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
+              url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 320"><rect fill="%23B88A5E" width="280" height="320"/></svg>');
+}
+
+.polaroid-label {
+  font-size: 16px;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.mandala-border {
+  width: 100%;
+  height: 80px;
+  background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='80' viewBox='0 0 1200 80' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40 Q 150 20, 300 40 T 600 40 T 900 40 T 1200 40' stroke='%23FFB8A0' stroke-width='1' fill='none' opacity='0.4'/%3E%3Cpath d='M0 50 Q 150 30, 300 50 T 600 50 T 900 50 T 1200 50' stroke='%23FFB8A0' stroke-width='1' fill='none' opacity='0.3'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-title {
+    font-size: 22px;
+  }
+
+  .polaroid-image {
+    width: 240px;
+    height: 280px;
+  }
+}
