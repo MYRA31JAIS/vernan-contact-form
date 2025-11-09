@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/vernan-contact-form/static/css/main.9914e199.css",
-    "main.js": "/vernan-contact-form/static/js/main.11fa5265.js",
+    "main.js": "/vernan-contact-form/static/js/main.e0e5057d.js",
     "static/js/453.8e2dfb19.chunk.js": "/vernan-contact-form/static/js/453.8e2dfb19.chunk.js",
     "static/media/video-thumbnail.png": "/vernan-contact-form/static/media/video-thumbnail.0cdd9ed85e9e908a01cb.png",
     "static/media/service2.png": "/vernan-contact-form/static/media/service2.f7e25c97d54988bdc63e.png",
@@ -13,11 +13,11 @@
     "static/media/mandala.png": "/vernan-contact-form/static/media/mandala.ffdc4720ef42cf15c0ac.png",
     "index.html": "/vernan-contact-form/index.html",
     "main.9914e199.css.map": "/vernan-contact-form/static/css/main.9914e199.css.map",
-    "main.11fa5265.js.map": "/vernan-contact-form/static/js/main.11fa5265.js.map",
+    "main.e0e5057d.js.map": "/vernan-contact-form/static/js/main.e0e5057d.js.map",
     "453.8e2dfb19.chunk.js.map": "/vernan-contact-form/static/js/453.8e2dfb19.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9914e199.css",
-    "static/js/main.11fa5265.js"
+    "static/js/main.e0e5057d.js"
   ]
 }
