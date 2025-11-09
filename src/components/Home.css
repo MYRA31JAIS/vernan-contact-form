@@ -30,15 +30,21 @@
   gap: 30px;
 }
 
-.nav-links a {
+.nav-links a,
+.nav-link-btn {
   color: #333;
   text-decoration: none;
   font-size: 14px;
   font-weight: 400;
   transition: color 0.3s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-link-btn:hover {
   color: #FF6B4A;
 }
 

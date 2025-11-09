@@ -9,8 +9,8 @@ const Home = () => {
     <div className="home-container">
       <nav className="navbar">
         <div className="nav-links">
-          <a onClick={() => navigate('/services')} style={{cursor: 'pointer'}}>Services</a>
-          <a onClick={() => navigate('/portfolio')} style={{cursor: 'pointer'}}>Portfolio</a>
+          <button onClick={() => navigate('/services')} className="nav-link-btn">Services</button>
+          <button onClick={() => navigate('/portfolio')} className="nav-link-btn">Portfolio</button>
           <a href="#story">Our Story</a>
           <a href="#varnan">Varnan</a>
           <button className="get-in-touch-btn" onClick={() => navigate('/contact')}>
